@@ -140,5 +140,126 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
   }
 }
+
+@utility btn-base {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: var(--radius-lg);
+  padding: 0.5rem 0.85rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  transition: all 0.18s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@utility btn-primary {
+  @apply btn-base;
+  background: var(--gradient-brand);
+  color: var(--primary-foreground);
+  box-shadow: var(--shadow-brand);
+  &:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+  }
+}
+
+@utility btn-soft {
+  @apply btn-base;
+  background: color-mix(in oklab, var(--primary) 10%, transparent);
+  color: var(--primary);
+  &:hover {
+    background: color-mix(in oklab, var(--primary) 18%, transparent);
+  }
+}
+
+@utility btn-ghost {
+  @apply btn-base;
+  color: var(--muted-foreground);
+  &:hover {
+    background: var(--muted);
+    color: var(--foreground);
+  }
+}
+
+@utility panel {
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-panel);
+}
+
+@utility panel-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+@utility label-xs {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+@utility field {
+  width: 100%;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--input);
+  background: var(--background);
+  padding: 0.5rem 0.7rem;
+  font-size: 0.875rem;
+  color: var(--foreground);
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+  &:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--primary) 18%, transparent);
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #fff !important;
+  }
+  main {
+    display: block !important;
+    max-width: none !important;
+    padding: 0 !important;
+  }
+  .print-sheet {
+    position: static !important;
+    max-width: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    font-size: 11.5px;
+    page-break-inside: avoid;
+  }
+  .print-sheet table {
+    page-break-inside: auto;
+  }
+}
+
