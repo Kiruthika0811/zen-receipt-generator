@@ -1,0 +1,94 @@
+<svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#182521"/>
+      <stop offset="100%" stop-color="#101815"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5EFDF"/>
+      <stop offset="100%" stop-color="#EEE6D2"/>
+    </linearGradient>
+    <filter id="paperShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    <radialGradient id="stampFade" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9C3A2E" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#9C3A2E" stop-opacity="0.75"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#bg)"/>
+
+  <!-- Faint grid / ledger lines on background for texture -->
+  <g stroke="#EFE6CE" stroke-opacity="0.045" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="140" x2="1200" y2="140"/>
+    <line x1="0" y1="340" x2="1200" y2="340"/>
+    <line x1="0" y1="360" x2="1200" y2="360"/>
+  </g>
+
+  <!-- Left mark: thin gold rule + eyebrow -->
+  <g>
+    <rect x="60" y="150" width="2" height="100" fill="#B8934A" opacity="0.7"/>
+    <text x="80" y="185" font-family="'Courier New', monospace" font-size="13" letter-spacing="3" fill="#C8BE9E">ZEN</text>
+    <text x="80" y="208" font-family="'Courier New', monospace" font-size="13" letter-spacing="3" fill="#C8BE9E">FLOW</text>
+    <text x="80" y="231" font-family="'Courier New', monospace" font-size="13" letter-spacing="3" fill="#C8BE9E">SYS</text>
+  </g>
+
+  <!-- Right mark: tech stack, stacked vertical -->
+  <g font-family="'Courier New', monospace" font-size="12" letter-spacing="1.5" fill="#9FB3A6" text-anchor="end">
+    <text x="1140" y="150">REACT 18</text>
+    <text x="1140" y="172">TYPESCRIPT</text>
+    <text x="1140" y="194">TAILWIND CSS</text>
+    <text x="1140" y="216">VITE</text>
+  </g>
+
+  <!-- Receipt paper card, slightly rotated -->
+  <g transform="rotate(-1.6 640 205)">
+    <path d="M330,55 L345,49 L360,61 L375,49 L390,61 L405,49 L420,61 L435,49 L450,61 L465,49 L480,61 L495,49 L510,61 L525,49 L540,61 L555,49 L570,61 L585,49 L600,61 L615,49 L630,61 L645,49 L660,61 L675,49 L690,61 L705,49 L720,61 L735,49 L750,61 L765,49 L780,61 L795,49 L810,61 L825,49 L840,61 L855,49 L870,61 L885,49 L900,61 L915,49 L930,61 L945,49 L950,55 L950,355 L935,349 L920,361 L905,349 L890,361 L875,349 L860,361 L845,349 L830,361 L815,349 L800,361 L785,349 L770,361 L755,349 L740,361 L725,349 L710,361 L695,349 L680,361 L665,349 L650,361 L635,349 L620,361 L605,349 L590,361 L575,349 L560,361 L545,349 L530,361 L515,349 L500,361 L485,349 L470,361 L455,349 L440,361 L425,349 L410,361 L395,349 L380,361 L365,349 L350,361 L335,349 L330,355 Z"
+          fill="url(#paper)" filter="url(#paperShadow)"/>
+
+    <!-- Perforation dots down the middle third, like a tear line -->
+    <g fill="#D8CDAE">
+      <circle cx="640" cy="80" r="1.6"/>
+      <circle cx="640" cy="92" r="1.6"/>
+      <circle cx="640" cy="104" r="1.6"/>
+    </g>
+
+    <!-- Eyebrow -->
+    <text x="360" y="95" font-family="'Courier New', monospace" font-size="12" letter-spacing="3.5" fill="#8A7E5F">INVOICE / RECEIPT FLOW</text>
+
+    <!-- Big wordmark -->
+    <text x="358" y="175" font-size="76" fill="#1B2420" font-weight="700" letter-spacing="-1">Zen</text>
+    <text x="358" y="212" font-size="21" font-style="italic" fill="#4B5A50" font-family="Georgia, serif">Invoice &amp; Receipt Flow System</text>
+
+    <!-- Dotted divider -->
+    <line x1="358" y1="232" x2="922" y2="232" stroke="#B8AD8C" stroke-width="1.5" stroke-dasharray="1,5" stroke-linecap="round"/>
+
+    <!-- Mock receipt line items, mono font -->
+    <g font-family="'Courier New', monospace" font-size="13" fill="#5B5340">
+      <text x="358" y="257">SUBTOTAL</text>
+      <text x="922" y="257" text-anchor="end">INR 24,500.00</text>
+      <text x="358" y="277">TAX · 18%</text>
+      <text x="922" y="277" text-anchor="end">INR 4,410.00</text>
+      <line x1="358" y1="290" x2="922" y2="290" stroke="#B8AD8C" stroke-width="1"/>
+      <text x="358" y="313" font-weight="700" fill="#1B2420" font-size="14">TOTAL DUE</text>
+      <text x="922" y="313" text-anchor="end" font-weight="700" fill="#1B2420" font-size="14">INR 28,910.00</text>
+    </g>
+
+    <!-- Hanko / stamp seal, overlapping bottom-right of the receipt -->
+    <g transform="translate(860,330) rotate(-12)">
+      <circle r="46" fill="none" stroke="#9C3A2E" stroke-width="3.5" opacity="0.9"/>
+      <circle r="46" fill="url(#stampFade)" opacity="0.12"/>
+      <path d="M-15,-12 Q0,-24 15,-12 Q6,-4 8,6 Q0,14 -8,6 Q-6,-4 -15,-12 Z"
+            fill="none" stroke="#9C3A2E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="0" cy="0" r="2.5" fill="#9C3A2E"/>
+      <text x="0" y="34" text-anchor="middle" font-size="9" letter-spacing="2" fill="#9C3A2E" font-family="'Courier New', monospace">PAID</text>
+    </g>
+  </g>
+
+  <!-- Bottom caption -->
+  <text x="600" y="385" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" letter-spacing="2" fill="#7C8A80">CLIENT-SIDE · NO DATABASE · PRINT-READY PDF</text>
+</svg>
