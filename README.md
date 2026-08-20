@@ -1,42 +1,90 @@
-# Invoice Flow
+<div align="center">
 
-Create a highly polished, professional Single-Page Invoice & Receipt Generator Web Application using React, Tailwind CSS, and Lucide Icons. The app must be fully responsive, bug-free, and work entirely client-side without requiring any external database connections.
+![Zen — Invoice & Receipt Flow System](./assets/banner.svg)
 
-Key Features to Include:
+# Zen Invoice & Receipt Flow System
 
-1. Dynamic Invoice Form: Fields for Company Name, Logo Upload (local data URL), Bill To, Invoice Number, Date, and Due Date.
+**A premium, fully client-side invoice & receipt generator.**
+No backend. No database. Just open the app and start billing.
 
-2. Line Items Table: Users can add, edit, and delete multiple rows of items. Each row must automatically calculate 'Quantity x Price = Total'.
+[![Live Demo](https://img.shields.io/badge/demo-live-9C3A2E?style=for-the-badge)](https://lovable.app)
+![React](https://img.shields.io/badge/React-18-1B2420?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-Strict-1B2420?style=for-the-badge&logo=typescript&logoColor=3178C6)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-3-1B2420?style=for-the-badge&logo=tailwindcss&logoColor=38BDF8)
+![Vite](https://img.shields.io/badge/Vite-Build-1B2420?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![License](https://img.shields.io/badge/license-Commercial-9C3A2E?style=for-the-badge)
 
-3. Automatic Tax & Discounts: Include inputs for Tax Percentage and Discount Percentage, updating the Subtotal and Grand Total in real-time with flawless floating-point math logic.
+[Live Demo](https://lovable.app) · [Features](#-premium-functional-modules) · [Getting Started](#-local-installation--setup) · [Tech Stack](#%EF%B8%8F-tech-stack--dependencies)
 
-4. Professional PDF Export: Integrate a reliable client-side PDF export feature (like html2pdf or browser print layout optimizations) that generates a clean, single-page, beautifully formatted PDF invoice when the user clicks 'Download PDF'.
+</div>
 
-5. History & Templates: Automatically save the active invoice draft to the browser's LocalStorage so no data is lost on page refresh. Include a 'Reset Form' button.
+---
 
-6. Design Aesthetic: Modern, minimalist SaaS dashboard styling. Use a clean slate/indigo color palette, smooth transitions, and professional typography.
+## Overview
 
-Ensure all code compiles perfectly on the first run with no missing dependencies or broken imports.
+Zen is a **single-page invoice and receipt generator** built for freelancers, small studios, and teams who want a fast, good-looking billing tool without the overhead of a backend, a database, or a subscription to a bloated SaaS platform. Every calculation, every save, and every export happens entirely in the browser — making it free to host and effectively instant to use.
 
-This project was built with [Lovable](https://lovable.dev).
+## 🚀 Live Demo
 
-**Live app**: https://zen-receipt-generator.lovable.app
+Try the fully operational production build here:
 
-## Build with Lovable
+**👉 [https://lovable.app](https://lovable.app)**
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/b2b0e891-1750-40e6-8f3a-aa5583f95d59).
+## 💎 Premium Functional Modules
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+### 1. High-Fidelity Mathematical Engine
+Precise floating-point calculation tracking updates item subtotals, custom discounts, and localized 18% tax metrics in real time as quantities or values are edited.
 
-## Development
+### 2. LocalStorage Data Persistence
+Active invoice forms are automatically cached to the browser's native LocalStorage layer, preventing data loss during unexpected page refreshes or browser updates.
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+### 3. Print-Optimized PDF Export
+Dedicated `@media print` CSS configurations compile the entire invoice layout into a clean, single-page PDF the moment you click **Download PDF**.
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+### 4. Enterprise UX Safeguards
+A double-verification confirmation dialog guards the form **Reset** action against accidental data loss, and built-in placeholder data means the app never looks blank or broken on first launch.
+
+## 🛠️ Tech Stack & Dependencies
+
+| Layer | Choice |
+|---|---|
+| Core Framework | React 18 (TypeScript) |
+| Styling Utility | Tailwind CSS |
+| Icon Library | Lucide React |
+| Build Tool | Vite |
+
+## 💻 Local Installation & Setup
+
+Run the app locally for development or customization:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/<your-username>/<your-repo>.git
+cd <your-repo>
+
+# 2. Install dependencies
+npm install
+
+# 3. Launch the dev server
 npm run dev
 ```
+
+Then open **http://localhost:5173** in your browser.
+
+## 📸 Preview
+
+> Add a screenshot or GIF of the app here once you have one — it's the single best thing you can add to this README.
+>
+> ```md
+> ![App Screenshot](./assets/screenshot.png)
+> ```
+
+## 📄 License & Intellectual Property
+
+Full 100% intellectual property ownership and commercial rights transfer with the purchase of this source repository asset.
+
+---
+
+<div align="center">
+<sub>Built with React, TypeScript, Tailwind CSS, and Vite.</sub>
+</div>
