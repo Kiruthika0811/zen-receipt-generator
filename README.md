@@ -1,6 +1,6 @@
 <div align="center">
 
-![Zen — Invoice & Receipt Flow System](./assets/banner.svg)
+![Zen — Invoice & Receipt Flow System](banner.svg)
 
 # Zen Invoice & Receipt Flow System
 
